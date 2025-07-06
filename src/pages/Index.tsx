@@ -18,7 +18,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-primary rounded pixelated"></div>
-              <span className="text-2xl font-bold">MoulWorld</span>
+              <span className="text-2xl font-bold">MouloWorld</span>
             </div>
             <nav className="hidden md:flex items-center gap-6">
               <a
@@ -381,7 +381,7 @@ const Index = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-primary rounded pixelated"></div>
-                <span className="text-xl font-bold">MoulWorld</span>
+                <span className="text-xl font-bold">MouloWorld</span>
               </div>
               <p className="text-muted-foreground mb-4">
                 Анархия сервер Minecraft без правил
@@ -511,7 +511,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-border/40 pt-8 mt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 MoulWorld. Все права защищены.</p>
+            <p>&copy; 2024 MouloWorld. Все права защищены.</p>
           </div>
         </div>
       </footer>
