@@ -11,408 +11,463 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground dark">
+    <div className="min-h-screen bg-gradient-to-br from-green-950 via-stone-900 to-black text-white">
       {/* Header */}
-      <header className="border-b border-border/40 bg-card/50 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-black/20 border-b border-green-800/30">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-primary rounded pixelated"></div>
-              <span className="text-2xl font-bold">MouloWorld</span>
+            <div className="flex items-center space-x-3">
+              <Icon name="Mountain" className="h-8 w-8 text-green-500" />
+              <span className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                CraftWorld
+              </span>
             </div>
-            <nav className="hidden md:flex items-center gap-6">
+            <nav className="hidden md:flex space-x-6">
               <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href="#home"
+                className="hover:text-green-400 transition-colors"
               >
                 Главная
               </a>
               <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href="#features"
+                className="hover:text-green-400 transition-colors"
               >
-                Вики
+                Особенности
               </a>
               <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href="#servers"
+                className="hover:text-green-400 transition-colors"
               >
-                Скриншоты
+                Сервера
               </a>
               <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                href="#community"
+                className="hover:text-green-400 transition-colors"
               >
-                Форум
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Донат
+                Сообщество
               </a>
             </nav>
-            <div className="flex items-center gap-2">
-              <Badge variant="secondary" className="bg-primary/20 text-primary">
-                <Icon
-                  name="Circle"
-                  size={8}
-                  className="mr-1 fill-green-400 text-green-400"
-                />
-                354 игроков
-              </Badge>
-            </div>
+            <Button className="bg-green-600 hover:bg-green-700 text-white">
+              <Icon name="Users" className="w-4 h-4 mr-2" />
+              Присоединиться
+            </Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20"></div>
-        <div className="container mx-auto px-4 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Лучший
-                <span className="block text-primary">Гриферский</span>
-                Сервер России
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-lg">
-                Анархия, выживание, PvP без правил. Строй, разрушай, выживай в
-                мире где все возможно!
+      <section id="home" className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/img/17a3884e-f655-456e-80f4-bc3fb41bc605.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/50 to-black/50"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <Badge className="mb-6 bg-green-600/20 text-green-300 border-green-500">
+              <Icon name="Sparkles" className="w-4 h-4 mr-2" />
+              Лучший Minecraft сервер России
+            </Badge>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                Добро пожаловать в
+              </span>
+              <br />
+              <span className="relative">
+                <span className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                  CraftWorld
+                </span>
+                <div className="absolute -inset-1 bg-green-500/20 blur-xl rounded-lg"></div>
+              </span>
+            </h1>
+            <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
+              Исследуй бесконечные миры, строй эпические сооружения и
+              отправляйся в приключения с друзьями!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4"
+              >
+                <Icon name="Play" className="w-5 h-5 mr-2" />
+                Начать играть
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-green-500 text-green-400 hover:bg-green-500/10 px-8 py-4"
+              >
+                <Icon name="Download" className="w-5 h-5 mr-2" />
+                Скачать лаунчер
+              </Button>
+            </div>
+            <div className="mt-8 text-sm text-gray-400">
+              <p>
+                IP:{" "}
+                <span className="text-green-400 font-mono">
+                  play.craftworld.ru
+                </span>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                >
-                  <Icon name="Play" size={20} className="mr-2" />
-                  Играть сейчас
+              <p>Версия: 1.20.4 - 1.21.x</p>
+              <p className="text-green-400 mt-2">🟢 Онлайн: 2,847 игроков</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 bg-black/40">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+              Особенности сервера
+            </h2>
+            <p className="text-xl text-gray-400">
+              Почему тысячи игроков выбирают CraftWorld
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300 group">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600/30 transition-colors">
+                  <Icon name="Home" className="w-6 h-6 text-green-400" />
+                </div>
+                <CardTitle className="text-green-300">Выживание</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-400">
+                  Классический режим выживания с уникальными модификациями и
+                  кастомными биомами.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300 group">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600/30 transition-colors">
+                  <Icon name="Pickaxe" className="w-6 h-6 text-green-400" />
+                </div>
+                <CardTitle className="text-green-300">
+                  Кастомные профессии
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-400">
+                  Развивайте уникальные навыки: кузнец, алхимик, строитель,
+                  исследователь и многие другие.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300 group">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600/30 transition-colors">
+                  <Icon name="Castle" className="w-6 h-6 text-green-400" />
+                </div>
+                <CardTitle className="text-green-300">
+                  Города и регионы
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-400">
+                  Создавайте свои города, торгуйте с другими игроками и
+                  развивайте экономику.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300 group">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600/30 transition-colors">
+                  <Icon name="Sword" className="w-6 h-6 text-green-400" />
+                </div>
+                <CardTitle className="text-green-300">Данжи и квесты</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-400">
+                  Исследуйте подземелья, выполняйте квесты и сражайтесь с
+                  уникальными боссами.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300 group">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600/30 transition-colors">
+                  <Icon name="Zap" className="w-6 h-6 text-green-400" />
+                </div>
+                <CardTitle className="text-green-300">
+                  Магия и зачарования
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-400">
+                  Изучайте магические искусства и создавайте мощные артефакты.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300 group">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600/30 transition-colors">
+                  <Icon name="Users" className="w-6 h-6 text-green-400" />
+                </div>
+                <CardTitle className="text-green-300">
+                  Дружелюбное сообщество
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-400">
+                  Активная модерация, помощь новичкам и регулярные мероприятия.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Servers Section */}
+      <section id="servers" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+              Игровые миры
+            </h2>
+            <p className="text-xl text-gray-400">Выбери свое приключение</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-green-300">Выживание</CardTitle>
+                  <Badge className="bg-green-600/20 text-green-300 border-green-500">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    Онлайн
+                  </Badge>
+                </div>
+                <CardDescription className="text-gray-400">
+                  Классический режим выживания с улучшениями
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Игроки:</span>
+                    <span className="text-green-400">1,847 / 3,000</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Версия:</span>
+                    <span className="text-green-400">1.21.1</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Сложность:</span>
+                    <span className="text-green-400">Нормальная</span>
+                  </div>
+                </div>
+                <Button className="w-full mt-4 bg-green-600 hover:bg-green-700">
+                  Подключиться
                 </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-green-300">Креатив</CardTitle>
+                  <Badge className="bg-green-600/20 text-green-300 border-green-500">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    Онлайн
+                  </Badge>
+                </div>
+                <CardDescription className="text-gray-400">
+                  Строй все, что захочешь
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Игроки:</span>
+                    <span className="text-green-400">456 / 1,000</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Версия:</span>
+                    <span className="text-green-400">1.21.1</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Сложность:</span>
+                    <span className="text-green-400">Мирная</span>
+                  </div>
+                </div>
+                <Button className="w-full mt-4 bg-green-600 hover:bg-green-700">
+                  Подключиться
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-green-300">Мини-игры</CardTitle>
+                  <Badge className="bg-green-600/20 text-green-300 border-green-500">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                    Онлайн
+                  </Badge>
+                </div>
+                <CardDescription className="text-gray-400">
+                  Разнообразные мини-игры и развлечения
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Игроки:</span>
+                    <span className="text-green-400">544 / 1,500</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Версия:</span>
+                    <span className="text-green-400">1.21.1</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Игры:</span>
+                    <span className="text-green-400">25+</span>
+                  </div>
+                </div>
+                <Button className="w-full mt-4 bg-green-600 hover:bg-green-700">
+                  Подключиться
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Section */}
+      <section id="community" className="py-20 bg-black/40">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+              Сообщество
+            </h2>
+            <p className="text-xl text-gray-400">
+              Присоединяйся к тысячам игроков
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-green-600/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon
+                    name="MessageCircle"
+                    className="w-8 h-8 text-green-400"
+                  />
+                </div>
+                <CardTitle className="text-green-300">Discord</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-sm text-gray-400 mb-4">
+                  Общайся с игроками в реальном времени
+                </p>
                 <Button
-                  size="lg"
                   variant="outline"
-                  className="border-border hover:bg-accent"
+                  className="border-green-500 text-green-400 hover:bg-green-500/10"
                 >
-                  <Icon name="Users" size={20} className="mr-2" />
-                  Discord
+                  Присоединиться
                 </Button>
-              </div>
-              <div className="flex items-center gap-8 mt-8 justify-center lg:justify-start">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">12K+</div>
-                  <div className="text-sm text-muted-foreground">Игроков</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">∞</div>
-                  <div className="text-sm text-muted-foreground">
-                    Возможностей
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">24/7</div>
-                  <div className="text-sm text-muted-foreground">Онлайн</div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="relative rounded-lg overflow-hidden border border-border/40">
-                <img
-                  src="/img/65ec471b-941b-4d8c-a8d7-72ac8e658a4d.jpg"
-                  alt="Minecraft PvP Arena"
-                  className="w-full h-auto pixelated"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4 border border-border/40">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="font-semibold">Мир Анархии</div>
-                        <div className="text-sm text-muted-foreground">
-                          Выживание без правил
-                        </div>
-                      </div>
-                      <Icon name="Sword" size={24} className="text-primary" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mini Games Section */}
-      <section className="py-20 bg-card/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Особенности сервера</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Полная анархия, выживание и PvP без ограничений
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-card/50 border-border/40 hover:bg-card/80 transition-all duration-300 group">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon
-                      name="Pickaxe"
-                      size={24}
-                      className="text-yellow-400"
-                    />
-                    Анархия
-                  </CardTitle>
-                  <Badge
-                    variant="secondary"
-                    className="bg-red-600/20 text-red-400"
-                  >
-                    <Icon
-                      name="Circle"
-                      size={8}
-                      className="mr-1 fill-red-400 text-red-400"
-                    />
-                    Активно
-                  </Badge>
-                </div>
-                <CardDescription>
-                  Мир без правил и администрации. Делай что хочешь!
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-red-600/20 to-orange-600/20 flex items-center justify-center">
-                    <Icon
-                      name="Skull"
-                      size={48}
-                      className="text-muted-foreground"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-muted-foreground">
-                    <Icon name="Users" size={16} className="inline mr-1" />
-                    Без лимита
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    <Icon name="Clock" size={16} className="inline mr-1" />
-                    24/7
-                  </div>
-                </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-card/50 border-border/40 hover:bg-card/80 transition-all duration-300 group">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon name="Flame" size={24} className="text-red-400" />
-                    Гриферство
-                  </CardTitle>
-                  <Badge
-                    variant="secondary"
-                    className="bg-orange-600/20 text-orange-400"
-                  >
-                    <Icon
-                      name="Circle"
-                      size={8}
-                      className="mr-1 fill-orange-400 text-orange-400"
-                    />
-                    Разрешено
-                  </Badge>
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-green-600/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Users" className="w-8 h-8 text-green-400" />
                 </div>
-                <CardDescription>
-                  Разрушай чужие постройки и создавай хаос
-                </CardDescription>
+                <CardTitle className="text-green-300">Форум</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-orange-600/20 to-red-600/20 flex items-center justify-center">
-                    <Icon
-                      name="Bomb"
-                      size={48}
-                      className="text-muted-foreground"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-muted-foreground">
-                    <Icon name="Users" size={16} className="inline mr-1" />
-                    Все игроки
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    <Icon name="Clock" size={16} className="inline mr-1" />
-                    Постоянно
-                  </div>
-                </div>
+              <CardContent className="text-center">
+                <p className="text-sm text-gray-400 mb-4">
+                  Обсуждения, гайды и новости
+                </p>
+                <Button
+                  variant="outline"
+                  className="border-green-500 text-green-400 hover:bg-green-500/10"
+                >
+                  Перейти
+                </Button>
               </CardContent>
             </Card>
 
-            <Card className="bg-card/50 border-border/40 hover:bg-card/80 transition-all duration-300 group">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon name="Sword" size={24} className="text-purple-400" />
-                    PvP
-                  </CardTitle>
-                  <Badge
-                    variant="secondary"
-                    className="bg-purple-600/20 text-purple-400"
-                  >
-                    <Icon
-                      name="Circle"
-                      size={8}
-                      className="mr-1 fill-purple-400 text-purple-400"
-                    />
-                    Везде
-                  </Badge>
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-green-600/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Trophy" className="w-8 h-8 text-green-400" />
                 </div>
-                <CardDescription>
-                  Сражения без правил по всему миру
-                </CardDescription>
+                <CardTitle className="text-green-300">Турниры</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-purple-600/20 to-red-600/20 flex items-center justify-center">
-                    <Icon
-                      name="Swords"
-                      size={48}
-                      className="text-muted-foreground"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-muted-foreground">
-                    <Icon name="Users" size={16} className="inline mr-1" />
-                    Все против всех
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    <Icon name="Clock" size={16} className="inline mr-1" />
-                    Постоянно
-                  </div>
-                </div>
+              <CardContent className="text-center">
+                <p className="text-sm text-gray-400 mb-4">
+                  Участвуй в соревнованиях и выигрывай призы
+                </p>
+                <Button
+                  variant="outline"
+                  className="border-green-500 text-green-400 hover:bg-green-500/10"
+                >
+                  Подробнее
+                </Button>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
 
-      {/* News Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Последние новости</h2>
-            <p className="text-xl text-muted-foreground">
-              Следи за обновлениями и событиями сервера
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-card/50 border-border/40 hover:bg-card/80 transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge
-                    variant="outline"
-                    className="border-primary/40 text-primary"
-                  >
-                    Обновление
-                  </Badge>
-                  <span className="text-sm text-muted-foreground">
-                    2 дня назад
-                  </span>
+            <Card className="bg-gray-900/50 border-green-800/30 hover:border-green-600/50 transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-green-600/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Gift" className="w-8 h-8 text-green-400" />
                 </div>
-                <CardTitle className="text-lg">
-                  Карта расширена до 100к блоков
-                </CardTitle>
-                <CardDescription>
-                  Огромный мир для исследования и выживания
-                </CardDescription>
+                <CardTitle className="text-green-300">Магазин</CardTitle>
               </CardHeader>
-            </Card>
-
-            <Card className="bg-card/50 border-border/40 hover:bg-card/80 transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge
-                    variant="outline"
-                    className="border-yellow-400/40 text-yellow-400"
-                  >
-                    Событие
-                  </Badge>
-                  <span className="text-sm text-muted-foreground">
-                    1 неделю назад
-                  </span>
-                </div>
-                <CardTitle className="text-lg">Война кланов</CardTitle>
-                <CardDescription>
-                  Масштабное сражение между крупнейшими кланами сервера
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="bg-card/50 border-border/40 hover:bg-card/80 transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge
-                    variant="outline"
-                    className="border-green-400/40 text-green-400"
-                  >
-                    Достижение
-                  </Badge>
-                  <span className="text-sm text-muted-foreground">
-                    2 недели назад
-                  </span>
-                </div>
-                <CardTitle className="text-lg">
-                  Сервер работает 3 года
-                </CardTitle>
-                <CardDescription>
-                  Стабильный сервер с постоянными обновлениями
-                </CardDescription>
-              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-sm text-gray-400 mb-4">
+                  Поддержи сервер и получи бонусы
+                </p>
+                <Button
+                  variant="outline"
+                  className="border-green-500 text-green-400 hover:bg-green-500/10"
+                >
+                  Открыть
+                </Button>
+              </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/40 bg-card/30 py-12">
+      <footer className="bg-black/60 border-t border-green-800/30 py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-primary rounded pixelated"></div>
-                <span className="text-xl font-bold">MouloWorld</span>
+              <div className="flex items-center space-x-3 mb-4">
+                <Icon name="Mountain" className="h-6 w-6 text-green-500" />
+                <span className="text-xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                  CraftWorld
+                </span>
               </div>
-              <p className="text-muted-foreground mb-4">
-                Анархия сервер Minecraft без правил
+              <p className="text-gray-400 text-sm">
+                Лучший Minecraft сервер России. Исследуй, строй, сражайся и
+                создавай свою историю!
               </p>
-              <div className="flex gap-4">
-                <Button size="sm" variant="outline">
-                  <Icon name="MessageCircle" size={16} />
-                </Button>
-                <Button size="sm" variant="outline">
-                  <Icon name="Youtube" size={16} />
-                </Button>
-                <Button size="sm" variant="outline">
-                  <Icon name="Twitter" size={16} />
-                </Button>
-              </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Игра</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h4 className="font-semibold mb-4 text-green-300">Игра</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
-                    Скачать
+                    Скачать лаунчер
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
                     Правила
                   </a>
@@ -420,15 +475,15 @@ const Index = () => {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
-                    Команды
+                    Карта мира
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
                     Статистика
                   </a>
@@ -436,20 +491,12 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Сообщество</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h4 className="font-semibold mb-4 text-green-300">Сообщество</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Форум
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
                     Discord
                   </a>
@@ -457,7 +504,15 @@ const Index = () => {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
+                  >
+                    Telegram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-green-400 transition-colors"
                   >
                     VK
                   </a>
@@ -465,28 +520,20 @@ const Index = () => {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
-                    YouTube
+                    Форум
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Поддержка</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h4 className="font-semibold mb-4 text-green-300">Поддержка</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Донат
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
                     Помощь
                   </a>
@@ -494,7 +541,7 @@ const Index = () => {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
                     Контакты
                   </a>
@@ -502,16 +549,24 @@ const Index = () => {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="hover:text-green-400 transition-colors"
                   >
-                    Баги
+                    Донат
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-green-400 transition-colors"
+                  >
+                    Магазин
                   </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-border/40 pt-8 mt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 MouloWorld. Все права защищены.</p>
+            <p>&copy; 2024 CraftWorld. Все права защищены.</p>
           </div>
         </div>
       </footer>
